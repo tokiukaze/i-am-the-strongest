@@ -10,6 +10,14 @@ packages = [{include = "i_am_the_strongest"}]
 python = "^3.9"
 
 
+[tool.poetry.group.dev.dependencies]
+aws-cdk-lib = "^2.47.0"
+aws-lambda-powertools = "^1.31.1"
+boto3 = "^1.24.96"
+isort = "^5.10.1"
+aws-sam-cli = "^1.60.0"
+pytest = "^7.1.3"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
