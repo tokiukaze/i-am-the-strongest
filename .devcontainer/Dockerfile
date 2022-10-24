@@ -17,5 +17,14 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
+# タブ補完を有効化
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+   && apt-get -y install --no-install-recommends bash-completion
+
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
+
+# cdkのインストール
+RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g aws-cdk" 2>&1
+# poetryのインストール
+RUN curl -sSL https://install.python-poetry.org | python3 -
