@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "i-am-the-strongest"
+version = "0.1.0"
+description = ""
+authors = ["tokiukaze <hare@tokiukaze.com>"]
+readme = "README.md"
+packages = [{include = "i_am_the_strongest"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
